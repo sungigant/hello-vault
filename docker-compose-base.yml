@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  dummy:
+    image: alpine:3.19
+    container_name: base-dummy
+    command: tail -f /dev/null
+    networks:
+      - vault-poc
+
+networks:
+  vault-poc:
+    driver: bridge
+    name: vault-poc

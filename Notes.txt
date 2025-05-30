@@ -1,0 +1,9 @@
+# Aliases
+alias psa='docker ps -a'
+alias rma='docker rm -f $(docker ps -aq)'
+
+# Start base service - launches the network and keeps it alive
+docker-compose -f docker-compose-base.yml up -d
+
+# Start Hashicorp Vault service and client - save some dummy keys
+docker-compose -f docker-compose-vault.yml up -d && docker logs -f vault-client
