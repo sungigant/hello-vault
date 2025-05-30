@@ -7,3 +7,6 @@ docker-compose -f docker-compose-base.yml up -d
 
 # Start Hashicorp Vault service and client - save some dummy keys
 docker-compose -f docker-compose-vault.yml up -d && docker logs -f vault-client
+
+# Start the Python client service to connect with Vault
+docker-compose -f docker-compose-python.yml up -d && docker logs -f python-vault-client
