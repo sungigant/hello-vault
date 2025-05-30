@@ -1,2 +1,2 @@
 # hello-vault
-Base ashicorp Vault with Python
+Base Hashicorp Vault with Python
